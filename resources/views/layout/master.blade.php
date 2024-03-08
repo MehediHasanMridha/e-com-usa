@@ -352,7 +352,7 @@
         <div class="bg-serpent py-2">
             <div class="container mx-auto">
                 <div class="">
-                    <p class="text-center text-xs text-white"> &copy; 2023 Copyright By Nexwift.</p>
+                    <p class="text-center text-xs text-white"> &copy; 2024 Copyright By BSMRSTU.</p>
                 </div>
             </div>
         </div>
