@@ -8,11 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       # Here is the deployment action
-      - name: Upload from public_html via FTP
-        uses: airvzxf/ftp-deployment-action@latest
-        with:
-          server: algobot048.com
-          user: algobot
-          password: syzh3lpf4187
-          local_dir: ./
-          remote_dir: old.algobot048.com/
+      - name: Upload Laravel Project via SCP
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y openssh-client
+          scp -r ./ algobot@algobot048.com:/home2/algobot/old.algobot048.com
+        env:
+          USER: algobot
+          PASSWORD: syzh3lpf4187
