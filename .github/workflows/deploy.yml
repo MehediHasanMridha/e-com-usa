@@ -1,21 +1,20 @@
-name: Deploy Laravel Project to Shared Hosting
-
 on:
   push:
     branches:
       - main
 
+name: 🚀 Deploy website on push
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.1.0
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2.3.2
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          fetch-depth: 2
-      - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.2
-        with:
-          ftp-server: ftp://ftp.algobot048.com/
-          ftp-username: ecom@old.algobot048.com
-          ftp-password: 4kg4Y*@yPKm$
+          server: ftp.algobot048.com/
+          username: ecom@old.algobot048.com
+          password: 4kg4Y*@yPKm$
