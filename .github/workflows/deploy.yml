@@ -11,6 +11,8 @@ jobs:
       - name: Upload from public_html via FTP
         uses: airvzxf/ftp-deployment-action@latest
         with:
-          server: ftp.algobot048.com
-          user: ecom@old.algobot048.com
-          password: dEDNJbNG_QCd
+          server: algobot048.com
+          user: algobot
+          password: syzh3lpf4187
+          local_dir: ./
+          remote_dir: old.algobot048.com/
