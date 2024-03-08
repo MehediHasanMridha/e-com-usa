@@ -6,34 +6,16 @@ on:
       - main
 
 jobs:
-  deploy:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # - name: Setup PHP
-      #   uses: shivammathur/setup-php@v2
-      #   with:
-      #     php-version: '8.2'
-      #     extensions: mbstring, intl, pdo_mysql
-      #     coverage: none
-
-      # - name: Install dependencies
-      #   run: composer install --prefer-dist --no-progress --no-suggest
-
-      # - name: Run tests
-      #   run: vendor/bin/phpunit
-
-      - name: Deploy to Shared Hosting
-        uses: appleboy/ssh-action@master
+      - uses: actions/checkout@v2.1.0
         with:
-          host: algobot048.com
-          username: algobot
-          password: syzh3lpf4187
-          # script: |
-          #   cd /path/to/your/project/on/server
-          #   git pull
-          #   composer install --no-dev
-          #   php artisan migrate --force
+          fetch-depth: 2
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.2
+        with:
+          ftp-server: ftp://ftp.algobot048.com/
+          ftp-username: ecom@old.algobot048.com
+          ftp-password: 4kg4Y*@yPKm$
