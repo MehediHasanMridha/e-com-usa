@@ -1,0 +1,18 @@
+name: CI -> Deploy to My website
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Here is the deployment action
+      - name: Upload from public_html via FTP
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: algobot048.com
+          user: algobot
+          password: syzh3lpf4187
+          local_dir: ./
+          remote_dir: old.algobot048.com/
