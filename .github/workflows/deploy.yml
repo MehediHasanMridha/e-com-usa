@@ -15,6 +15,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ftp.algobot048.com/
-          username: ecom@old.algobot048.com
-          password: 4kg4Y*@yPKm$
+          server: algobot048.com
+          username: algobot
+          password: syzh3lpf4187
+          server-dir: old.algobot048.com/
