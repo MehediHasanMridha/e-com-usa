@@ -1,0 +1,11 @@
+@extends('layout.master')
+@section('content')
+    @include('component.heroslider')
+    @include('component.sellproduct')
+    @include('component.buyoffer')
+    @include('component.newproduct')
+    @include('component.collections')
+    @include('component.subscribe')
+    @include('component.brandservices')
+    @include('component.modal')
+@endsection

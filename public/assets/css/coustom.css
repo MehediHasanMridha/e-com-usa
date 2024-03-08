@@ -1,0 +1,421 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1111;
+}
+
+.addCart {
+    position: relative;
+}
+
+.adding_number {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222222;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    right: -15px;
+
+}
+
+.addCart:hover .adding_number {
+    background: #fff;
+    cursor: pointer;
+}
+
+
+/* ========Nav-end========== */
+/* ==========Hero-slider start========= */
+.hero-slider {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 100px);
+}
+
+.hero-slider_info {
+    position: absolute;
+    top: 40%;
+}
+
+/* ==========Hero-slider end========= */
+
+
+/* ==========Sell Product start========= */
+.sell_product {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    position: relative;
+
+}
+
+.selDiscount {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background: rgba(0, 212, 240, 0.747);
+    z-index: 2;
+}
+
+.sel_product_cart {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.sel_product_cart:hover .selDiscount {
+    background: rgb(0, 212, 240);
+}
+
+
+.cart_option {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cart_option {
+    background: rgba(0, 212, 240, 0.603);
+    transition: .3s all ease;
+    border-radius: 0px 15px 15px 0px;
+    z-index: 2;
+}
+
+.cart_option:hover {
+    background: rgb(0, 212, 240);
+}
+
+.cart_icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.product_info {
+    position: absolute;
+    background: rgba(1, 21, 24, 0.404);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: 1s all ease;
+}
+
+.sel_product_cart:hover .product_info {
+    top: 0;
+}
+
+.new-product {
+    display: none;
+}
+
+.toprated {
+    display: none;
+}
+
+/* ==========Sell Product end========= */
+
+/* ==========Offer satrt========= */
+.offer_back {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: 11;
+}
+
+.offer_back::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(209, 68, 8, 0.438);
+    top: 0;
+    right: 0;
+    z-index: -1111;
+
+}
+
+.offer-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+}
+
+/* ==========Offet end========= */
+
+/* =============Subscribe-area start=========== */
+.subscrib_area {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+/* =============Subscribe-area End=========== */
+
+/* ===============Login start========== */
+.userAccount {
+    position: relative;
+}
+
+.auth {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.userAccount:hover .auth {
+    display: flex;
+}
+
+.login_img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+.input-area {
+    position: relative;
+}
+
+.inupt-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ===============Login End========== */
+
+/* =============Single-product-page start======== */
+.product_slider_img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.product_banner {
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product_slider.swiper-button-next:after,
+.swiper-button-prev:after {
+
+    font-size: 20px !important;
+}
+
+.product_slider.swiper-button-next:after,
+.swiper-button-next:after {
+
+    font-size: 20px !important;
+}
+
+.share_social {
+    position: relative;
+}
+
+.social_share_product {
+    position: absolute;
+    right: 50%;
+    display: none;
+    transition: .3s all ease;
+}
+
+.share_social:hover .social_share_product {
+    display: flex;
+
+}
+
+
+/* =============Single-product-page end======== */
+
+
+/* =================Blog start=========== */
+
+.blog-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.blog-card:hover .blog-card-img {
+    scale: 1.2;
+}
+
+.blog-card-img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: 2s all ease;
+}
+
+.blog-info {
+    position: absolute;
+    background-color: #222222c4;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 24px;
+    bottom: 0;
+}
+
+/* =================Blog end=========== */
+
+/* ===================About-store start============ */
+
+.about_store {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.about_store::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    background-color: #0000;
+}
+
+/* ===================About-store end============ */
+
+/* ================Offer-slider-start======== */
+.offer-slider {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+}
+
+/* ================Offer-slider-end======== */
+
+/* ===============Blog-details-start========= */
+.blog-image {
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+}
+
+/* ===============Blog-details-end========= */
+
+/* =====================Open-modal-start================ */
+#modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+
+.modalconent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 80%;
+}
+
+/* =====================Open-modal-end================ */
+
+
+/* =============Responsive start============ */
+
+@media only screen and (max-width:1024px) {
+    .hero-slider {
+        height: 60vh;
+    }
+
+    .hero-slider_info {
+        top: 25%;
+        left: 5%;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .hero-slider {
+        height: 25vh;
+    }
+
+    .hero-slider_info {
+        top: 25%;
+        left: 5%;
+    }
+
+
+    .nav-area {
+        position: relative;
+        transition: .5s all ease;
+
+    }
+
+    .dropdown {
+        display: none;
+        transition: .5s all ease;
+
+
+    }
+
+    .expand {
+        display: block;
+        position: absolute;
+        background: #222222;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        top: 67px;
+
+
+    }
+}
+
+@media only screen and (max-width:300px) {
+    .hero-slider {
+        height: 28vh;
+    }
+
+    .hero-slider_info {
+        top: 25%;
+        left: 5%;
+    }
+}
+
+/* =============Responsive End============ */
