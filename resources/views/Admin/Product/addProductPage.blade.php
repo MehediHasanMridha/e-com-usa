@@ -37,7 +37,8 @@
         <br>
         <label for="brand_name">Type</label>
         <select name="type" id="">
-            <option value="boy">boy</option>
+            <option value="global">Global</option>
+            <option value="china">China</option>
         </select>
         <br>
         <label for="brand_name">short Description</label>

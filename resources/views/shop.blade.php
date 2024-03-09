@@ -46,38 +46,20 @@
                                 <div class="mt-4">
                                     <div class="mb-2 flex items-center gap-3">
                                         <div class="mt-1">
-                                            <input class="" type="radio" name="filter" value="men"
-                                                {{ in_array('men', $typeArray) ? 'checked' : '' }} onclick="isChecked()">
+                                            <input class="" type="radio" name="filter" value="global"
+                                                {{ in_array('global', $typeArray) ? 'checked' : '' }} onclick="isChecked()">
                                         </div>
                                         <div class="">
-                                            <p class="text-sm font-light text-rbalck">Men</p>
+                                            <p class="text-sm font-light text-rbalck">Global</p>
                                         </div>
                                     </div>
                                     <div class="mb-2 flex items-center gap-3">
                                         <div class="mt-1">
-                                            <input class="" type="radio" name="filter" value="woman"
-                                                {{ in_array('woman', $typeArray) ? 'checked' : '' }} onclick="isChecked()">
+                                            <input class="" type="radio" name="filter" value="china"
+                                                {{ in_array('china', $typeArray) ? 'checked' : '' }} onclick="isChecked()">
                                         </div>
                                         <div class="">
-                                            <p class="text-sm font-light text-rbalck">Woman</p>
-                                        </div>
-                                    </div>
-                                    <div class="mb-2 flex items-center gap-3">
-                                        <div class="mt-1">
-                                            <input class="" type="radio" name="filter" value="boy"
-                                                {{ in_array('boy', $typeArray) ? 'checked' : '' }} onclick="isChecked()">
-                                        </div>
-                                        <div class="">
-                                            <p class="text-sm font-light text-rbalck">Boy</p>
-                                        </div>
-                                    </div>
-                                    <div class="mb-2 flex items-center gap-3">
-                                        <div class="mt-1">
-                                            <input class="" type="radio" name="filter" value="girl"
-                                                {{ in_array('girl', $typeArray) ? 'checked' : '' }} onclick="isChecked()">
-                                        </div>
-                                        <div class="">
-                                            <p class="text-sm font-light text-rbalck">Girl</p>
+                                            <p class="text-sm font-light text-rbalck">China</p>
                                         </div>
                                     </div>
                                 </div>
