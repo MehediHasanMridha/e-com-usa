@@ -14,16 +14,31 @@
     <a href="{{ route('addProductPage') }}">Add Product</a>
     <br>
     <br>
+    <a href="{{ route('viewProductSection') }}">View All Product</a>
+    <br>
+    <br>
     <a href="{{ route('addCategoryPage') }}">Add Category</a>
+    <br>
+    <br>
+    <a href="{{ route('viewCategory') }}">View All Category</a>
     <br>
     <br>
     <a href="{{ route('addBrandPage') }}">Add Brand</a>
     <br>
     <br>
+    <a href="{{ route('viewBrand') }}">View All Brand</a>
+    <br>
+    <br>
     <a href="{{ route('addSlideShowPage') }}">Add Slider</a>
     <br>
     <br>
+    <a href="{{ route('viewSlide') }}">View All Slider</a>
+    <br>
+    <br>
     <a href="{{ route('addBlogPage') }}">Add Blog</a>
+    <br>
+    <br>
+    <a href="{{ route('viewBlog') }}">View All Blog</a>
     <br>
     <br>
 

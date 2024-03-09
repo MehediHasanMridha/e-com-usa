@@ -7,8 +7,8 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\SlideShow;
-use Auth;
 use Illuminate\Http\Request;
+use Spatie\Backtrace\File;
 
 class AdminController extends Controller
 {
@@ -17,7 +17,6 @@ class AdminController extends Controller
     // {
     //     $this->middleware('admin');
     // }
-
 
     public function admin_home()
     {
@@ -171,7 +170,6 @@ class AdminController extends Controller
         return view('Admin.Blog.addBogPage');
     }
 
-
     public function add_blog_data(Request $request)
     {
         $blog = new Blog();
@@ -191,32 +189,86 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function viewCategory()
     {
-        //
+        $category = Category::orderBy('category_name', 'asc')->get();
+        return view('Admin.Category.view_category', compact('category'));
+    }
+
+    public function viewProduct()
+    {
+        $product = Product::orderBy('title', 'asc')->get();
+        return view('Admin.Product.view_product', compact('product'));
+    }
+    public function deleteProduct(string $id)
+    {
+        $product = Product::find($id);
+        foreach (json_decode($product->image) as $image) {
+            if (file_exists(public_path('assets/product_image/' . $image))) {
+                unlink(public_path('assets/product_image/' . $image));
+            }
+        }
+        $product->delete();
+        return redirect()->back();
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function viewBrand()
     {
-        //
+        $brand = Brand::orderBy('brand_name', 'asc')->get();
+        return view('Admin.Brand.view_brand', compact('brand'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function deleteBrand(string $id)
     {
-        //
+        $brand = Brand::find($id);
+        $brand->delete();
+        return redirect()->back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function deleteCategory(string $id)
     {
-        //
+        $category = Category::find($id);
+        $category->delete();
+        return redirect()->back();
+    }
+
+    public function viewBlog()
+    {
+        $blog = Blog::orderBy('title', 'asc')->get();
+        return view('Admin.Blog.view_blog', compact('blog'));
+    }
+
+    public function deleteBlog(string $id)
+    {
+        $blog = Blog::find($id);
+        if (file_exists(public_path('assets/blog_image/' . $blog->image))) {
+            unlink(public_path('assets/blog_image/' . $blog->image));
+        }
+        $blog->delete();
+        return redirect()->back();
+    }
+
+    public function viewSlide()
+    {
+        $slide = SlideShow::orderBy('type', 'asc')->get();
+        return view('Admin.SlideShow.view_slide', compact('slide'));
+    }
+    public function deleteSlide(string $id)
+    {
+        $slide = SlideShow::find($id);
+        if (file_exists(public_path('assets/slide_image/' . $slide->image))) {
+            unlink(public_path('assets/slide_image/' . $slide->image));
+        }
+        $slide->delete();
+        return redirect()->back();
     }
 }
