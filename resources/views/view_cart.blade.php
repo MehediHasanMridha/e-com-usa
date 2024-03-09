@@ -13,7 +13,7 @@
                 <div class="flex w-full justify-between px-10">
                     <h1 class="text-2xl">{{ $item->product->title }}</h1>
                     <div class="text-2xl">({{ $item->quantity }}*{{ number_format($item->product->price, 2) }})=</div>
-                    <div class="text-2xl">${{ $item->quantity * number_format($item->product->price, 2) }}</div>
+                    <div class="text-2xl">$({{ $item->quantity }} * {{ number_format($item->product->price, 2) }})</div>
                 </div>
             @endforeach
         </div>
